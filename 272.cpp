@@ -3,15 +3,15 @@ using namespace std;
 
 int main(){
     char c;
-    int i;
+    bool first=true;
     while(cin >> noskipws  >> c){
             if(c=='"'){
-                if(i%2==0){
+                if(first){
                     cout << "``";
                 }else{
                     cout << "''";
                 }
-                i = (i+1)%2;
+                first = !first;
             }else{
                 cout << c;
             }
